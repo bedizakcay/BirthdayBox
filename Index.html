@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.8.1.2 (Linux)"/>
+	<meta name="author" content="Apache POI"/>
+	<meta name="created" content="2026-03-15T11:13:26"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 1in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;!DOCTYPE
+html&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;html
+lang=&quot;en&quot;&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;head&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;meta
+charset=&quot;UTF-8&quot;/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;meta
+name=&quot;viewport&quot; content=&quot;width=device-width,
+initial-scale=1.0, maximum-scale=1.0&quot;/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;title&gt;🎂
+BirthdayBox&lt;/title&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;link
+href=&quot;https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&amp;display=swap&quot;
+rel=&quot;stylesheet&quot;/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;style&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">*{margin:0;padding:0;box-sizing:border-box}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">body{background:#1a1a2e;font-family:'Nunito',sans-serif;color:#fff}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.3)}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">select
+option{background:#1a1a2e}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">input[type=file]{display:none}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">.popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn
+0.3s ease}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">.popup-box{background:linear-gradient(135deg,#1a1a2e,#0f3460);border:2px
+solid rgba(255,215,0,0.4);border-radius:28px;padding:32px
+24px;text-align:center;max-width:320px;width:90%;animation:popIn 0.4s
+ease}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">@keyframes
+fadeIn{from{opacity:0}to{opacity:1}}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">@keyframes
+popIn{from{transform:scale(0.7);opacity:0}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">to{transform:scale(1);opacity:1}}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">@keyframes
+confetti{0%{transform:translateY(-10px)
+rotate(0deg);opacity:1}100%{transform:translateY(100vh)
+rotate(720deg);opacity:0}}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">.confetti-piece{position:fixed;top:-10px;width:10px;height:10px;border-radius:2px;animation:confetti
+3s ease-in forwards;z-index:999}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/style&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/head&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;body&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+id=&quot;root&quot;&gt;&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;script&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">//
+── Service Worker for notifications ──</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">if('serviceWorker'
+in navigator){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+sw = `</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">self.addEventListener('push',
+e =&gt; {</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+data = e.data ? e.data.json() : {};</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">self.registration.showNotification(data.title
+|| '🎂 BirthdayBox', {</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">body:
+data.body || 'Someone has a birthday!',</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">icon:
+'data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;
+viewBox=&quot;0 0 100 100&quot;&gt;&lt;text y=&quot;.9em&quot;
+font-size=&quot;90&quot;&gt;🎂&lt;/text&gt;&lt;/svg&gt;',</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">badge:
+'data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;
+viewBox=&quot;0 0 100 100&quot;&gt;&lt;text y=&quot;.9em&quot;
+font-size=&quot;90&quot;&gt;🎂&lt;/text&gt;&lt;/svg&gt;',</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">vibrate:
+[200, 100, 200],</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">tag:
+'birthday-notification',</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">renotify:
+true</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">self.addEventListener('notificationclick',
+e =&gt; { e.notification.close(); clients.openWindow('/'); });</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">//
+Daily check alarm</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">self.addEventListener('activate',
+e =&gt; {</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">e.waitUntil(self.registration.update());</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">`;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+blob = new Blob([sw], {type:'application/javascript'});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+swUrl = URL.createObjectURL(blob);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">navigator.serviceWorker.register(swUrl).catch(()=&gt;{});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/script&gt;</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;script
+src=&quot;https://unpkg.com/react@18/umd/react.development.js&quot;&gt;&lt;/script&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;script
+src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;script
+src=&quot;https://unpkg.com/@babel/standalone/babel.min.js&quot;&gt;&lt;/script&gt;</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;script
+type=&quot;text/babel&quot;&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+{useState, useEffect, useRef, useCallback} = React;</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+EMOJIS=[&quot;🎂&quot;,&quot;🎉&quot;,&quot;🎈&quot;,&quot;🎁&quot;,&quot;🥳&quot;,&quot;🌟&quot;,&quot;💫&quot;,&quot;🎊&quot;];</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+COLORS=[[&quot;#FF6B6B&quot;,&quot;#FFE66D&quot;],</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">[&quot;#A8EDEA&quot;,&quot;#FED6E3&quot;],[&quot;#D4FC79&quot;,&quot;#96E6A1&quot;],[&quot;#FFA07A&quot;,&quot;#FFD700&quot;],[&quot;#C9FFBF&quot;,&quot;#FFAFBD&quot;],[&quot;#FBC2EB&quot;,&quot;#A6C1EE&quot;],[&quot;#FDDB92&quot;,&quot;#D1FDFF&quot;],[&quot;#FFECD2&quot;,&quot;#FCB69F&quot;]];</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+MONTHS=[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;,&quot;July&quot;,&quot;August&quot;,&quot;September&quot;,&quot;October&quot;,&quot;November&quot;,&quot;December&quot;];</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+daysUntil(month,day){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+today=new Date();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">let
+next=new Date(today.getFullYear(),month-1,day);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(next&lt;today)
+next=new Date(today.getFullYear()+1,month-1,day);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+diff=Math.ceil((next-today)/(1000*60*60*24));</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">return
+diff===365?0:diff;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+calcAge(year,month,day){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(!year)
+return null;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+today=new Date();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">let
+age=today.getFullYear()-year;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+
+<font face="Arial, serif"><font size="6" style="font-size: 21pt">if(today.getMonth()+1&lt;month||(today.getMonth()+1===month&amp;&amp;today.getDate()&lt;day))age--;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">return
+age;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+nextAge(year,month,day){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(!year)return
+null;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">return
+daysUntil(month,day)===0?calcAge(year,month,day):calcAge(year,month,day)+1;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+launchConfetti(){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+colors=[&quot;#FFD700&quot;,&quot;#FF6B6B&quot;,&quot;#A78BFA&quot;,&quot;#4ECDC4&quot;,&quot;#FF8E53&quot;,&quot;#fff&quot;];</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">for(let
+i=0;i&lt;40;i++){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+el=document.createElement(&quot;div&quot;);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">el.className=&quot;confetti-piece&quot;;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">el.style.left=Math.random()*100+&quot;vw&quot;;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+  
+<font face="Arial, serif"><font size="6" style="font-size: 21pt">el.style.background=colors[Math.floor(Math.random()*colors.length)];</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">el.style.animationDelay=Math.random()*2+&quot;s&quot;;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">el.style.width=(Math.random()*10+6)+&quot;px&quot;;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">el.style.height=(Math.random()*10+6)+&quot;px&quot;;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">el.style.borderRadius=Math.random()&gt;0.5?&quot;50%&quot;:&quot;2px&quot;;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">document.body.appendChild(el);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">setTimeout(()=&gt;el.remove(),4000);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+playSound(){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">try{</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+ctx=new(window.AudioContext||window.webkitAudioContext)();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+notes=[523,659,784,1047];</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">notes.forEach((freq,i)=&gt;{</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+o=ctx.createOscillator();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+g=ctx.createGain();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">o.connect(g);g.connect(ctx.destination);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">o.frequency.value=freq;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">o.type=&quot;sine&quot;;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">g.gain.setValueAtTime(0,ctx.currentTime+i*0.15);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">g.gain.linearRampToValueAtTime(0.3,ctx.currentTime+i*0.15+0.05);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">g.gain.linearRampToValueAtTime(0,ctx.currentTime+i*0.15+0.3);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">o.start(ctx.currentTime+i*0.15);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">o.stop(ctx.currentTime+i*0.15+0.3);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">}catch(e){}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">async
+function requestNotificationPermission(){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(!('Notification'
+in window)) return false;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(Notification.permission==='granted')
+return true;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+result=await Notification.requestPermission();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">return
+result==='granted';</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+scheduleNotification(name, daysLeft){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(!('Notification'
+in window)||Notification.permission!=='granted') return;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(daysLeft===0){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">new
+Notification(&quot;🎂 Happy Birthday!&quot;, {body:`Today is
+${name}'s birthday! Don't forget to wish them!`,
+icon:&quot;data:image/svg+xml,&lt;svg xmlns='http://</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">www.w3.org/2000/svg'
+viewBox='0 0 100 100'&gt;&lt;text y='.9em'
+font-size='90'&gt;🎂&lt;/text&gt;&lt;/svg&gt;&quot;,
+vibrate:[200,100,200]});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">}
+else if(daysLeft===1){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">new
+Notification(&quot;🎁 Birthday Tomorrow!&quot;, {body:`${name}'s
+birthday is tomorrow! Time to prepare!`,
+icon:&quot;data:image/svg+xml,&lt;svg
+xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text
+y='.9em' font-size='90'&gt;🎁&lt;/text&gt;&lt;/svg&gt;&quot;});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">}
+else if(daysLeft===7){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">new
+Notification(&quot;📅 Birthday in 1 Week!&quot;, {body:`${name}'s
+birthday is in 7 days!`, icon:&quot;data:image/svg+xml,&lt;svg
+xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text
+y='.9em' font-size='90'&gt;📅&lt;/text&gt;&lt;/svg&gt;&quot;});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+BirthdayPopup({birthdays, onClose}){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">useEffect(()=&gt;{launchConfetti();playSound();},[]);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">return(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+className=&quot;popup-overlay&quot; onClick={onClose}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+className=&quot;popup-box&quot; onClick={e=&gt;e.stopPropagation()}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:64,marginBottom:8}}&gt;🎂&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:22,fontWeight:900,background:&quot;linear-gradient(90deg,#FFD700,#FF6B6B)&quot;,WebkitBackgroundClip:&quot;text&quot;,WebkitTextFillColor:&quot;transparent&quot;,marginBott</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">om:16}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">{birthdays.length===1?&quot;Happy
+Birthday!&quot;:&quot;Birthdays Today! 🎉&quot;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">{birthdays.map(b=&gt;(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+key={b.id}
+style={{background:&quot;rgba(255,255,255,0.08)&quot;,borderRadius:16,padding:&quot;12px
+16px&quot;,marginBottom:10,display:&quot;flex&quot;,alignItems:&quot;center&quot;,gap:12}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">{b.photo</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">?&lt;img
+src={b.photo} alt={b.name}
+style={{width:48,height:48,borderRadius:&quot;50%&quot;,objectFit:&quot;cover&quot;,border:&quot;2px
+solid #FFD700&quot;}}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">:&lt;div
+style={{width:48,height:48,borderRadius:&quot;50%&quot;,background:`linear-gradient(135deg,${b.color[0]},${b.color[1]})`,display:&quot;flex&quot;,alignItems:&quot;center&quot;,justifyContent:&quot;center&quot;,fontSize:24}}&gt;{b.emoji}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{textAlign:&quot;left&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontWeight:900,fontSize:18}}&gt;{b.name}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">{b.year&amp;&amp;&lt;div
+style={{fontSize:13,color:&quot;rgba(255,255,255,0.6)&quot;}}&gt;Turning
+{nextAge(parseInt(b.year),b.month,b.day)} today! 🥳&lt;/div&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">))}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;button
+onClick={onClose}
+style={{width:&quot;100%&quot;,background:&quot;linear-gradient(135deg,#FFD700,#FF6B6B)&quot;,border:&quot;none&quot;,borderRadius:16,padding:&quot;14px&quot;,color:&quot;#1a1a2e&quot;,fontSize:16,fontWeight:900,cursor:&quot;pointer&quot;,marginTop:8}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         🎉 <font face="Arial, serif"><font size="6" style="font-size: 21pt">Celebrate!</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/button&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+App(){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+[birthdays,setBirthdays]=useState(()=&gt;{try{return
+JSON.parse(localStorage.getItem(&quot;bb_v3&quot;)||&quot;[]&quot;)}catch{return[]}});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+[view,setView]=useState(&quot;home&quot;);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+[form,setForm]=useState({name:&quot;&quot;,day:&quot;&quot;,month:&quot;&quot;,year:&quot;&quot;,photo:null});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+[saved,setSaved]=useState(false);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+[search,setSearch]=useState(&quot;&quot;);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+[popup,setPopup]=useState(null);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+[notifEnabled,setNotifEnabled]=useState(Notification?.permission==='granted');</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+[notifAsked,setNotifAsked]=useState(false);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+fileRef=useRef();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+
+<font face="Arial, serif"><font size="6" style="font-size: 21pt">useEffect(()=&gt;{try{localStorage.setItem(&quot;bb_v3&quot;,JSON.stringify(birthdays))}catch{}},[birthdays]);</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">//
+Check birthdays on app open</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">useEffect(()=&gt;{</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+lastCheck=localStorage.getItem(&quot;bb_lastcheck&quot;);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+today=new Date().toDateString();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(lastCheck===today)
+return;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">localStorage.setItem(&quot;bb_lastcheck&quot;,today);</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+todayBdays=birthdays.filter(b=&gt;daysUntil(b.month,b.day)===0);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(todayBdays.length&gt;0){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">setTimeout(()=&gt;setPopup(todayBdays),800);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">//
+Schedule notifications for upcoming</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">birthdays.forEach(b=&gt;{</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+days=daysUntil(b.month,b.day);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">scheduleNotification(b.name,days);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">},[birthdays]);</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">//
+Ask for notification permission once</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">useEffect(()=&gt;{</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(!notifAsked
+&amp;&amp; birthdays.length&gt;0 &amp;&amp;
+Notification?.permission==='default'){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">setNotifAsked(true);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">setTimeout(async()=&gt;{</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+granted=await requestNotificationPermission();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">setNotifEnabled(granted);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">},2000);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">},[birthdays,notifAsked]);</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+sorted=[...birthdays].sort((a,b)=&gt;daysUntil(a.month,a.day)-daysUntil(b.month,b.day));</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+filtered=sorted.filter(b=&gt;b.name.toLowerCase().includes(search.toLowerCase()));</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+todayBdays=sorted.filter(b=&gt;daysUntil(b.month,b.day)===0);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+thisWeek=sorted.filter(b=&gt;{const d=daysUntil(b.month,b.day);return
+d&gt;0&amp;&amp;d&lt;=7});</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+handlePhoto(e){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+file=e.target.files[0];</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(!file)return;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+r=new FileReader();</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">r.onload=ev=&gt;setForm(f=&gt;({...f,photo:ev.target.result}));</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">r.readAsDataURL(file);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+handleAdd(){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(!form.name||!form.day||!form.month)return;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+emoji=EMOJIS[Math.floor(Math.random()*EMOJIS.length)];</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+color=COLORS[Math.floor(Math.random()*COLORS.length)];</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+newB={...form,id:Date.now(),emoji,color};</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">setBirthdays(p=&gt;[...p,newB]);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">setForm({name:&quot;&quot;,day:&quot;&quot;,month:&quot;&quot;,year:&quot;&quot;,photo:null});</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">setSaved(true);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">//
+Ask for notification permission when first birthday added</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">if(Notification?.permission==='default'){</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">requestNotificationPermission().then(g=&gt;setNotifEnabled(g));</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">setTimeout(()=&gt;{setSaved(false);setView(&quot;home&quot;)},1200);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">function
+del(id){setBirthdays(p=&gt;p.filter(b=&gt;b.id!==id))}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+Avatar=({b,size=52})=&gt;b.photo</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">?&lt;img
+src={b.photo} alt={b.name}
+style={{width:size,height:size,borderRadius:&quot;50%&quot;,objectFit:&quot;cover&quot;,border:&quot;2px
+solid </font></font></font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">rgba(255,255,255,0.2)&quot;,flexShrink:0}}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">:&lt;div
+style={{width:size,height:size,borderRadius:&quot;50%&quot;,background:`linear-gradient(135deg,${b.color[0]}55,${b.color[1]}55)`,display:&quot;flex&quot;,alignItems:&quot;center&quot;,justifyContent:&quot;center&quot;,fontSize:size*0.5,flexShrink:0,border:&quot;2px
+solid rgba(255,255,255,0.15)&quot;}}&gt;{b.emoji}&lt;/div&gt;;</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+Card=({b})=&gt;{</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+days=daysUntil(b.month,b.day);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+ca=b.year?calcAge(parseInt(b.year),b.month,b.day):null;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+na=b.year?nextAge(parseInt(b.year),b.month,b.day):null;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">return(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{borderRadius:20,background:`linear-gradient(135deg,${b.color[0]}22,${b.color[1]}22)`,border:`1px
+solid ${b.color[0]}44`,padding:&quot;12px
+14px&quot;,display:&quot;flex&quot;,alignItems:&quot;center&quot;,gap:12,marginBottom:10}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;Avatar
+b={b}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{flex:1}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontWeight:800,fontSize:16,marginBottom:2}}&gt;{b.name}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:12,color:&quot;rgba(255,255,255,0.5)&quot;}}&gt;{MONTHS[b.month-1]}
+{b.day}{b.year?`, ${b.year}`:&quot;&quot;}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">{ca!==null&amp;&amp;&lt;div
+style={{fontSize:12,color:&quot;rgba(255,255,255,0.6)&quot;,marginTop:2}}&gt;{days===0?`🎉
+Turns ${na} today!`:`Age ${ca} → turning ${na}`}&lt;/div&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{display:&quot;flex&quot;,flexDirection:&quot;column&quot;,alignItems:&quot;center&quot;,gap:6}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{background:days===0?&quot;linear-gradient(135deg,#FFD700,#FF6B6B)&quot;:`linear-gradient(135deg,${b.color[0]},${b.color[1]})`,borderRadius:12,padding:&quot;6px
+10px&quot;,textAlign:&quot;center&quot;,minWidth:48}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:18,fontWeight:900,color:&quot;#1a1a2e&quot;,lineHeight:1}}&gt;{days===0?&quot;🎂&quot;:days}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">{days&gt;0&amp;&amp;&lt;div
+style={{fontSize:10,color:&quot;#1a1a2e&quot;,fontWeight:700,opacity:0.7}}&gt;days&lt;/div&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">{view===&quot;upcoming&quot;&amp;&amp;&lt;button
+onClick={()=&gt;del(b.id)}
+style={{background:&quot;rgba(255,255,255,0.08)&quot;,border:&quot;none&quot;,borderRadius:10,color:&quot;rgba(255,255,255,0.4)&quot;,width:30,height:30,cursor:&quot;pointer&quot;,fontSize:16}}&gt;×&lt;/button&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">};</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">const
+inputStyle={width:&quot;100%&quot;,background:&quot;rgba(255,255,255,0.08)&quot;,border:&quot;2px
+solid rgba(255,255,255,0.12)&quot;,borderRadius:16,padding:&quot;14px
+16px&quot;,color:&quot;#fff&quot;,fontSize:16,fontFamily:&quot;inherit&quot;,outline:&quot;none&quot;,marginBottom:14};</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">return(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{minHeight:&quot;100vh&quot;,background:&quot;linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)&quot;,maxWidth:430,margin:&quot;0
+auto&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">{popup&amp;&amp;&lt;BirthdayPopup
+birthdays={popup} onClose={()=&gt;setPopup(null)}/&gt;}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">{/*
+Notification banner */}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+    
+<font face="Arial, serif"><font size="6" style="font-size: 21pt">{!notifEnabled&amp;&amp;birthdays.length&gt;0&amp;&amp;Notification?.permission!=='denied'&amp;&amp;(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{background:&quot;linear-gradient(135deg,#A78BFA,#6366f1)&quot;,padding:&quot;10px
+16px&quot;,display:&quot;flex&quot;,alignItems:&quot;center&quot;,gap:10,cursor:&quot;pointer&quot;}}
+onClick={async()=&gt;{const g=await
+requestNotificationPermission();setNotifEnabled(g);}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;span
+style={{fontSize:20}}&gt;🔔&lt;/span&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;span
+style={{fontSize:13,fontWeight:700,flex:1}}&gt;Tap to enable birthday
+notifications!&lt;/span&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;span
+style={{fontSize:18,opacity:0.7}}&gt;→&lt;/span&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">)}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">{view===&quot;home&quot;&amp;&amp;(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{paddingBottom:90}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{padding:&quot;28px 24px 16px&quot;,textAlign:&quot;center&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;h1
+style={{fontSize:32,fontWeight:900,margin:0,background:&quot;linear-gradient(90deg,#FFD700,#FF6B6B,#A78BFA)&quot;,WebkitBackgroundClip:&quot;text&quot;,WebkitTextFillColor:&quot;transparent&quot;}}&gt;🎂
+BirthdayBox&lt;/h1&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;p
+style={{fontSize:13,color:&quot;rgba(255,255,255,0.5)&quot;,marginTop:4}}&gt;Never
+miss a special day&lt;/p&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">{notifEnabled&amp;&amp;&lt;div
+style={{fontSize:11,color:&quot;#4ade80&quot;,marginTop:6,fontWeight:700}}&gt;🔔
+Notifications ON&lt;/div&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">{todayBdays.map(b=&gt;(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+key={b.id} style={{margin:&quot;0 16px
+12px&quot;,borderRadius:20,background:&quot;linear-gradient(135deg,#FF6B6B,#FFD700)&quot;,padding:&quot;14px
+18px&quot;,display:&quot;flex&quot;,alignItems:&quot;center&quot;,gap:12,boxShadow:&quot;0
+8px 24px rgba(255,107,107,0.4)&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;Avatar
+b={b} size={56}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontWeight:800,fontSize:13,color:&quot;#1a1a2e&quot;}}&gt;🎉
+Today's Birthday!&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontWeight:900,fontSize:20,color:&quot;#1a1a2e&quot;}}&gt;{b.name}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">{b.year&amp;&amp;&lt;div
+style={{fontSize:12,color:&quot;#1a1a2e&quot;,opacity:0.7}}&gt;Turns
+{nextAge(parseInt(b.year),b.month,b.day)} today!&lt;/div&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">))}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{display:&quot;flex&quot;,gap:10,padding:&quot;0 16px 16px&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+          
+<font face="Arial, serif"><font size="6" style="font-size: 21pt">{[[birthdays.length,&quot;Total&quot;,&quot;#FFD700&quot;],[todayBdays.length,&quot;Today&quot;,&quot;#FF6B6B&quot;],[thisWeek.length,&quot;This
+Week&quot;,&quot;#A78BFA&quot;]].map(([n,l,c])=&gt;(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+key={l}
+style={{flex:1,background:&quot;rgba(255,255,255,0.08)&quot;,borderRadius:16,padding:&quot;14px
+10px&quot;,textAlign:&quot;center&quot;,border:&quot;1px solid
+rgba(255,255,255,0.1)&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:28,fontWeight:900,color:c}}&gt;{n}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:11,color:&quot;rgba(255,255,255,0.5)&quot;,marginTop:4}}&gt;{l}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">))}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">{thisWeek.length&gt;0&amp;&amp;&lt;&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{padding:&quot;4px 20px </font></font></font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">10px&quot;,fontSize:13,fontWeight:700,textTransform:&quot;uppercase&quot;,letterSpacing:1.5,color:&quot;rgba(255,255,255,0.4)&quot;}}&gt;⚡
+Coming This Week&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{padding:&quot;0 16px&quot;}}&gt;{thisWeek.map(b=&gt;&lt;Card
+key={b.id} b={b}/&gt;)}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">{birthdays.length===0&amp;&amp;&lt;div
+style={{textAlign:&quot;center&quot;,padding:&quot;48px
+24px&quot;,color:&quot;rgba(255,255,255,0.3)&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:64,marginBottom:16}}&gt;🎈&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div&gt;No
+birthdays yet!&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{marginTop:8,fontSize:13}}&gt;Tap + to add your first
+one&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">)}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">{view===&quot;upcoming&quot;&amp;&amp;(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{paddingBottom:90}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{padding:&quot;28px 24px 16px&quot;,textAlign:&quot;center&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;h1
+style={{fontSize:32,fontWeight:900,margin:0,background:&quot;linear-gradient(90deg,#FFD700,#FF6B6B,#A78BFA)&quot;,WebkitBackgroundClip:&quot;text&quot;,WebkitTextFillColor:&quot;transparent&quot;}}&gt;📋
+All Birthdays&lt;/h1&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;p
+style={{fontSize:13,color:&quot;rgba(255,255,255,0.5)&quot;,margi</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">nTop:4}}&gt;{birthdays.length}
+people saved&lt;/p&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;input
+value={search} onChange={e=&gt;setSearch(e.target.value)}
+placeholder=&quot;🔍 Search...&quot;
+style={{...inputStyle,margin:&quot;0 16px 12px&quot;,width:&quot;calc(100%
+- 32px)&quot;,marginBottom:12}}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{padding:&quot;0 16px&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">{filtered.length===0&amp;&amp;&lt;div
+style={{textAlign:&quot;center&quot;,padding:&quot;48px
+24px&quot;,color:&quot;rgba(255,255,255,0.3)&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:48,marginBottom:12}}&gt;{birthdays.length===0?&quot;🎁&quot;:&quot;🔍&quot;}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div&gt;{birthdays.length===0?&quot;Add
+some birthdays!&quot;:&quot;No results found&quot;}&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">{filtered.map(b=&gt;&lt;Card
+key={b.id} b={b}/&gt;)}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">)}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">{view===&quot;add&quot;&amp;&amp;(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{padding:&quot;24px 20px 100px&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{fontSize:26,fontWeight:900,marginBottom:24}}&gt;🎉 Add
+Birthday&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">{saved?&lt;div
+style={{textAlign:&quot;center&quot;,fontSize:48,padding:48}}&gt;🎂&lt;br/&gt;Saved!&lt;/div&gt;:(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{marginBottom:14,display:&quot;flex&quot;,alignItems:&quot;center&quot;,gap:14}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">{form.photo</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+                 <font face="Arial, serif"><font size="6" style="font-size: 21pt">?&lt;img
+src={form.photo} onClick={()=&gt;fileRef.current.click()}
+alt=&quot;preview&quot;
+style={{width:72,height:72,borderRadius:&quot;50%&quot;,objectFit:&quot;cover&quot;,border:&quot;3px
+solid rgba(255,255,255,0.2)&quot;,cursor:&quot;pointer&quot;}}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+                 <font face="Arial, serif"><font size="6" style="font-size: 21pt">:&lt;div
+onClick={()=&gt;fileRef.current.click()}
+style={{width:72,height:72,borderRadius:&quot;50%&quot;,background:&quot;rgba(255,255,255,0.08)&quot;,border:&quot;2px
+dashed
+rgba(255,255,255,0.25)&quot;,display:&quot;flex&quot;,alignItems:&quot;center&quot;,justifyContent:&quot;center&quot;,fontSize:28,cursor:&quot;pointer&quot;}}&gt;📷&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;input
+ref={fileRef} type=&quot;file&quot; accept=&quot;image/*&quot;
+onChange={handlePhoto}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;button
+onClick={()=&gt;fileRef.current.click()}
+style={{flex:1,background:&quot;rgba(255,255,255,0.08)&quot;,border:&quot;2px
+dashed
+rgba(255,255,255,0.2)&quot;,borderRadius:16,padding:14,color:&quot;rgba(255,255,255,0.6)&quot;,fontSize:14,fontWeight:700,cursor:&quot;pointer&quot;,fontFamily:&quot;inherit&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+                 <font face="Arial, serif"><font size="6" style="font-size: 21pt">{form.photo?&quot;📷
+Change photo&quot;:&quot;📷 Add a photo (optional)&quot;}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/button&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;input
+value={form.name}
+onChange={e=&gt;setForm(f=&gt;({...f,name:e.target.value}))} </font></font></font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">placeholder=&quot;Name&quot;
+style={inputStyle}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{display:&quot;flex&quot;,gap:10}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;select
+value={form.month}
+onChange={e=&gt;setForm(f=&gt;({...f,month:parseInt(e.target.value)}))}
+style={{...inputStyle,flex:1.5}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+                 <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;option
+value=&quot;&quot;&gt;Month&lt;/option&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+                 <font face="Arial, serif"><font size="6" style="font-size: 21pt">{MONTHS.map((m,i)=&gt;&lt;option
+key={m} value={i+1}&gt;{m}&lt;/option&gt;)}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/select&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;select
+value={form.day}
+onChange={e=&gt;setForm(f=&gt;({...f,day:parseInt(e.target.value)}))}
+style={{...inputStyle,flex:1}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+                 <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;option
+value=&quot;&quot;&gt;Day&lt;/option&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+                 <font face="Arial, serif"><font size="6" style="font-size: 21pt">{Array.from({length:31},(_,i)=&gt;i+1).map(d=&gt;&lt;option
+key={d} value={d}&gt;{d}&lt;/option&gt;)}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/select&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;input
+value={form.year}
+onChange={e=&gt;setForm(f=&gt;({...f,year:e.target.value}))}
+placeholder=&quot;Birth year (optional)&quot; type=&quot;number&quot;
+min=&quot;1900&quot; max={new Date().getFullYear()}
+style={inputStyle}/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;button
+onClick={handleAdd} disabled={!form.name||!form.day||!form.month}
+style={{width:&quot;100%&quot;,background:&quot;linear-gradient(135deg,#FFD700,#FF6B6B)&quot;,border:&quot;none&quot;,borderRadius:18,padding:16,color:&quot;#1a1a2e&quot;,fontSize:17,fontWeight:900,cursor:&quot;pointer&quot;,opacity:(!form.name||!form.day||!form.month)?0.5:1,boxShadow:&quot;0
+8px 24px </font></font></font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">rgba(255,107,107,0.35)&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+               <font face="Arial, serif"><font size="6" style="font-size: 21pt">Add
+Birthday 🎂</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+             <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/button&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">)}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">)}</font></font></font></p>
+<p style="line-height: 112%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;div
+style={{position:&quot;fixed&quot;,bottom:0,left:&quot;50%&quot;,transform:&quot;translateX(-50%)&quot;,width:&quot;100%&quot;,maxWidth:430,background:&quot;rgba(15,20,40,0.97)&quot;,borderTop:&quot;1px
+solid rgba(255,255,255,0.08)&quot;,display:&quot;flex&quot;,padding:&quot;10px
+0 16px&quot;}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+      
+<font face="Arial, serif"><font size="6" style="font-size: 21pt">{[[&quot;home&quot;,&quot;🏠&quot;,&quot;Home&quot;],[&quot;add&quot;,&quot;</font></font><font face="NSimSun"><font size="2" style="font-size: 10pt"><span lang="zh-CN"><font face="Arial"><font size="6" style="font-size: 21pt">＋</font></font></span></font></font><font face="Arial, serif"><font size="6" style="font-size: 21pt">&quot;,&quot;Add&quot;],[&quot;upcoming&quot;,&quot;📋&quot;,&quot;All&quot;]].map(([v,icon,label])=&gt;(</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;button
+key={v} onClick={()=&gt;setView(v)}
+style={{flex:1,background:&quot;none&quot;,border:&quot;none&quot;,color:view===v?&quot;#FFD700&quot;:&quot;rgba(255,255,255,0.35)&quot;,display:&quot;flex&quot;,flexDirection:&quot;column&quot;,alignItems:&quot;center&quot;,gap:4,cursor:&quot;pointer&quot;,fontSize:v===&quot;add&quot;?28:22}}&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+           <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;span&gt;{icon}&lt;/span&gt;&lt;span
+style={{fontSize:10,fontWeight:700}}&gt;{label}&lt;/span&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+         <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/button&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+       <font face="Arial, serif"><font size="6" style="font-size: 21pt">))}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+     <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+   <font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/div&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525">
+ <font face="Arial, serif"><font size="6" style="font-size: 21pt">);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">}</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">ReactDOM.createRoot(document.getElementById(&quot;root&quot;)).render(&lt;App/&gt;);</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/script&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/body&gt;</font></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><font color="#252525"><font face="Arial, serif"><font size="6" style="font-size: 21pt">&lt;/html&gt;</font></font></font></p>
+</body>
+</html>
